@@ -122,6 +122,10 @@ function fix() {
 git checkout -b fix/ben/${1// /-}
 }
 
+function prune() {
+git fetch -p && for branch in $(git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}'); do git branch -D $branch; done
+}
+
 # add kube-ps1 context
 KUBE_PS1_SYMBOL_ENABLE=false
 PROMPT=$PROMPT'$(kube_ps1) '
