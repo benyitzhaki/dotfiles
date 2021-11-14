@@ -121,5 +121,16 @@ git fetch -p && for branch in $(git for-each-ref --format '%(refname) %(upstream
 KUBE_PS1_SYMBOL_ENABLE=false
 PROMPT=$PROMPT'$(kube_ps1) '
 
-# dotfiles
+
+# RVM AND NVM SUPPORT
+# nvm
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# rvm
+export PATH="$PATH:$HOME/.rvm/bin"
+
+
+# shared dotfiles
 source ~/dotfiles/.bash_profile
