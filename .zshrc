@@ -134,3 +134,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # shared dotfiles
 source ~/dotfiles/.bash_profile
+
+#aliases
+alias k="kubectl"
