@@ -137,3 +137,4 @@ source ~/dotfiles/.bash_profile
 
 #aliases
 alias k="kubectl"
+alias tf="terraform"
