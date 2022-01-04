@@ -138,3 +138,4 @@ source ~/dotfiles/.bash_profile
 #aliases
 alias k="kubectl"
 alias tf="terraform"
+alias redis-cli="docker run -it redis redis-cli"
